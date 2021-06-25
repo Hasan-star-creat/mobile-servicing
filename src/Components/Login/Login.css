@@ -1,0 +1,42 @@
+.form input{
+    display: block;
+    margin-top: 5px;
+}
+.input-feild{
+    margin-top: 20px;
+    width: 300px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #E6E6E6; 
+}
+.input-part{
+    border: 1px solid #E6E6E6 ;
+    width: 420px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 3px;
+}
+.input-part p{
+    margin-top: 15px;
+    text-align: center;
+    font-size: small;
+}
+.social-icon{
+   width: 300px; 
+   border-radius: 10px;
+   border: 1px solid  #E6E6E6; 
+   background-color: #ffffff;
+}
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  a.social:hover {
+    transform: translateY(-2px);
+  }
+  a.facebook {
+    color: #4968ad;
+  }
+  

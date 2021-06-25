@@ -1,0 +1,14 @@
+.content{
+    width: 320px;
+}
+.content:hover{
+ background-color: #fdc74a;
+ color:white;
+}
+
+.main-btn{
+  background: linear-gradient(0.25turn, #07abf1, #88cc97, #56b1d8);
+  font-weight: bold;
+  width: auto;
+    
+}
