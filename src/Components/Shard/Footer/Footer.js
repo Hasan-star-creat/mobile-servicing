@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock, faMailBulk, faMapMarker, faMarker, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faClock, faMailBulk, faMapMarker, faPhone } from "@fortawesome/free-solid-svg-icons";
+
 
 const Footer = () => {
     return (
-      <footer className="row">
+      <footer className="row py-5">
         <div className="col-md-4">
           <h2>fixed</h2>
           <p className="text-secondary">
@@ -71,11 +73,29 @@ const Footer = () => {
             09:30 AM - 06:00PM
           </p>
           <div className="d-flex">
-            <p className="mr-2">
-              facebook
+            <p>
+              <a href="https://www.twitter.com" className="social facebook">
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+              </a>
             </p>
-            <p className="mr-2">twiter</p>
-            <p className="mr-2">linkedin</p>
+            <p>
+              <a href="https://www.facebook.com" className="social facebook">
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://www.linkedin.com/feed/"
+                className="social facebook"
+              >
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+              </a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com" className="social facebook">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+              </a>
+            </p>
           </div>
         </div>
       </footer>
