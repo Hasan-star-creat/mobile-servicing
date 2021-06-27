@@ -21,7 +21,7 @@ const Content = ({ modalIsOpen, closeModal }) => {
            formData.append("file", file);
            formData.append("name", data.title);
            formData.append("desc", data.description);
-           fetch("http://localhost:5050/addService", {
+           fetch("https://still-spire-67822.herokuapp.com/addService", {
              method: "POST",
              body: formData,
            })

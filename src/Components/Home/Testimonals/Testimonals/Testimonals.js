@@ -8,7 +8,7 @@ import { useState } from 'react';
 const Testimonals = () => {
   const [reviewItem, setReviewItem] = useState([])
     useEffect(() => {
-      fetch("http://localhost:5050/review")
+      fetch("https://still-spire-67822.herokuapp.com/review")
       .then(res => res.json())
       .then(data => setReviewItem(data))
     }, [])

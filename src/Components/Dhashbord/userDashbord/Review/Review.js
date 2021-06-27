@@ -13,7 +13,7 @@ const Review = () => {
           const value = {name: data.name, company:data.company, desc:data.description, photo:loggedInUser.photo, date: new Date()}
           console.log(value)
         
-       fetch("http://localhost:5050/addReview", {
+       fetch("https://still-spire-67822.herokuapp.com/addReview", {
          method: "POST",
          headers: { "content-type": "application/json" },
          body: JSON.stringify({ review: value}),

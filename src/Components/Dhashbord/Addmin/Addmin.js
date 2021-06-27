@@ -10,7 +10,7 @@ const Admin = () => {
     }
     
     const handleMakeAdmin = () => {
-        fetch('http://localhost:5050/makeAddmin' ,{
+        fetch('https://still-spire-67822.herokuapp.com/makeAddmin' ,{
           method:'POST',
           headers: {'content-type': 'application/json'} ,
           body: JSON.stringify({email:addAdmin})
