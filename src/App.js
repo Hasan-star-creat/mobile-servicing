@@ -5,6 +5,8 @@ import Home from "./Components/Home/Home/Home";
 import PrivetRoute from './Components/PrivetRoute/PrivetRoute';
 import Login from './Components/Login/Login'
 import OrderPlace from "./Components/OrderPlace/OrderPlace";
+import Admin from "./Components/Dhashbord/Addmin/Addmin";
+import Review from "./Components/Dhashbord/userDashbord/Review/Review";
 
 export const userContext = createContext();
 
@@ -23,8 +25,14 @@ function App() {
           <PrivetRoute path="/orderPlace/:servicekey">
             <OrderPlace></OrderPlace>
           </PrivetRoute>
+          <PrivetRoute path="/admin">
+            <Admin></Admin>
+          </PrivetRoute>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/review">
+            <Review></Review>
           </Route>
           <Route exact path="/">
             <Home></Home>

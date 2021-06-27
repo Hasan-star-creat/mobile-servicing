@@ -1,29 +1,18 @@
 import React from 'react';
 import Review from '../Review/Review';
 import image from '../../../../image/membar.jpg';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 
 const Testimonals = () => {
-    const reviewItem = [
-      {
-        name: "hasan",
-        img: image,
-        comment: "amaging her service",
-        date: "2020/20/20"
-      },
-      {
-        name: "Jisan",
-        img: image,
-        comment: "amaging her service",
-        date: "2020/20/20"
-      },
-      {
-        name: "Jisan",
-        img: image,
-        comment: "amaging her service",
-        date: "2020/20/20"
-      },
-    ];
+  const [reviewItem, setReviewItem] = useState([])
+    useEffect(() => {
+      fetch("http://localhost:5050/review")
+      .then(res => res.json())
+      .then(data => setReviewItem(data))
+    }, [])
+  
     return (
       <section className="my-5">
         <div className="text-center">
@@ -35,7 +24,9 @@ const Testimonals = () => {
           </p>
         </div>
         <div className="row">
-           {reviewItem.map(rev => <Review rev={rev}></Review>)}
+          {reviewItem.map((rev) => (
+            <Review rev={rev}></Review>
+          ))}
         </div>
       </section>
     );

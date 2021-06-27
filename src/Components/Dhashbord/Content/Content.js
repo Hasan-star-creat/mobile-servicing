@@ -39,46 +39,46 @@ const Content = ({ modalIsOpen, closeModal }) => {
 
   return (
     <div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-        contentLabel="Example Modal"
-      >
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="d-flex justify-content-around">
-            <div className="mr-5 my-2">
-              <input
-                {...register("title", { required: true })}
+      <div>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          style={customStyles}
+          contentLabel="Example Modal"
+        >
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="d-flex justify-content-around">
+              <div className="mr-5 my-2">
+                <input
+                  {...register("title", { required: true })}
+                  placeholder="service Title"
+                />
+                {errors.title && (
+                  <p className="text-danger">Title is required.</p>
+                )}
+              </div>
+              <div className="my-2">
+                <input type="file" {...register("files", { required: true })} />
+                {errors.file && (
+                  <p className="text-danger">Image Insert is required.</p>
+                )}
+              </div>
+            </div>
+            <div>
+              <textarea
+                {...register("description", { required: true })}
                 placeholder="service Title"
               />
-              {errors.title && (
-                <p className="text-danger">Title is required.</p>
+              {errors.description && (
+                <p className="text-danger">description is required.</p>
               )}
             </div>
-            <div className="my-2">
-              <input type="file" {...register("files", { required: true })} />
-              {errors.file && (
-                <p className="text-danger">Image Insert is required.</p>
-              )}
+            <div className="d-flex justify-content-end">
+              <input type="submit" />
             </div>
-          </div>
-          <div>
-            <textarea
-              {...register("description", { required: true })}
-              placeholder="service Title"
-            />
-            {errors.description && (
-              <p className="text-danger">description is required.</p>
-            )}
-          </div>
-          <div className="d-flex justify-content-end">
-           
-            <input type="submit" />
-          </div>
-         
-        </form>
-      </Modal>
+          </form>
+        </Modal>
+      </div>
     </div>
   );
 };

@@ -71,7 +71,7 @@ const NavBar = () => {
                 </Link>
               </li>
               <li class="nav-item ms-5">
-                <Link class="nav-link">
+                <Link to="/admin" class="nav-link">
                   Admin
                 </Link>
               </li>
